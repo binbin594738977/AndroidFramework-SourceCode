@@ -1,3 +1,6 @@
+# 项目地址
+<https://github.com/binbin594738977/AndroidFramework-soundCode>
+
 # 介绍
 首先感谢[android-hidden-api](https://github.com/anggrayudi/android-hidden-api)项目作者,本项目是通过该项目提供的jar提取的java代码,主要是解决以下几点问题:
 
@@ -5,3 +8,13 @@
 2. 不适合生产环境使用,有可能出现奇怪的问题
 
 本项目是将所有jar包提取了java代码,这样需要查看源码可以通过idea查看,有错误可以自己修复,甚至可以自己注释,方便学习
+
+# 扩展
+当查看native函数时,这时候实现类在C中,就需要借助在线阅读的方式,推荐以下几个在线网站
+1. AndroidXRef网站:<http://androidxref.com/>
+2. Android社区<https://www.androidos.net.cn/sourcecode>可以下载缺失代码
+
+
+# 扩展2
+当native函数不清楚对应哪一个C文件时,推荐下面文章
+<https://blog.csdn.net/losingcarryjie/article/details/78244823>

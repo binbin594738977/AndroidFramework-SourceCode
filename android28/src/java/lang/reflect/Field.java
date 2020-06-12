@@ -31,7 +31,6 @@ import sun.reflect.CallerSensitive;
 import java.lang.annotation.Annotation;
 import java.util.Objects;
 import libcore.reflect.AnnotatedElements;
-import libcore.reflect.GenericSignatureParser;
 
 
 /**

@@ -49,8 +49,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Objects;
-import libcore.reflect.GenericSignatureParser;
-import libcore.reflect.InternalNames;
+
 import libcore.reflect.Types;
 import libcore.util.BasicLruCache;
 import libcore.util.CollectionUtils;

@@ -30,10 +30,8 @@ import dalvik.annotation.optimization.FastNative;
 import java.lang.annotation.Annotation;
 import java.util.Objects;
 import libcore.reflect.AnnotatedElements;
-import libcore.reflect.GenericSignatureParser;
 import libcore.reflect.ListOfTypes;
 import libcore.reflect.Types;
-import libcore.util.EmptyArray;
 
 /**
  * A shared superclass for the common functionality of {@link Method}
