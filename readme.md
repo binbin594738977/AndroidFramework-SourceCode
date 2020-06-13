@@ -2,6 +2,10 @@
 <https://github.com/binbin594738977/AndroidFramework-soundCode>
 
 # 介绍
+本项目是Android各个版本的java层代码,可以直接下载后在IDEA中查看,不像AndroidStudio一样很多类和方法看不到,这个包含隐藏类和隐藏方法,超级方便
+
+
+# 感谢
 首先感谢[android-hidden-api](https://github.com/anggrayudi/android-hidden-api)项目作者,本项目是通过该项目提供的jar提取的java代码,主要是解决以下几点问题:
 
 1. 经过测试,部分版本替换jar时有报错的问题
@@ -12,9 +16,10 @@
 # 扩展
 当查看native函数时,这时候实现类在C中,就需要借助在线阅读的方式,推荐以下几个在线网站
 1. AndroidXRef网站:<http://androidxref.com/>
-2. Android社区<https://www.androidos.net.cn/sourcecode>可以下载缺失代码
+2. Android社区<https://www.androidos.net.cn/sourcecode>
 
 
 # 扩展2
 当native函数不清楚对应哪一个C文件时,推荐下面文章
 <https://blog.csdn.net/losingcarryjie/article/details/78244823>
+
