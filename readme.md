@@ -18,6 +18,7 @@
 1. AndroidXRef网站:<http://androidxref.com/>
 2. Android社区<https://www.androidos.net.cn/sourcecode>
 3. 查看androd源码的工具，谷歌官方出的<https://cs.android.com>
+4. 清华大学开源软件镜像站<https://mirrors.tuna.tsinghua.edu.cn/help/AOSP/>
 
 # 扩展2
 当native函数不清楚对应哪一个C文件时,推荐下面文章
