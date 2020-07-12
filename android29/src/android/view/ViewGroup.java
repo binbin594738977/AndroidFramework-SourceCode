@@ -2631,7 +2631,7 @@ public abstract class ViewGroup extends View implements ViewParent, ViewManager 
             final boolean split = (mGroupFlags & FLAG_SPLIT_MOTION_EVENTS) != 0;
             TouchTarget newTouchTarget = null;
             boolean alreadyDispatchedToNewTouchTarget = false;
-            if (!canceled && !intercepted) {
+            if (!canceled && !intercepted) {//todo 分发给子view
 
                 // If the event is targeting accessibility focus we give it to the
                 // view that has accessibility focus and if it does not handle it
@@ -2641,7 +2641,7 @@ public abstract class ViewGroup extends View implements ViewParent, ViewManager 
                 View childWithAccessibilityFocus = ev.isTargetAccessibilityFocus()
                         ? findChildWithAccessibilityFocus() : null;
 
-                if (actionMasked == MotionEvent.ACTION_DOWN
+                if (actionMasked == MotionEvent.ACTION_DOWN//是ACTION_DOWN才分发
                         || (split && actionMasked == MotionEvent.ACTION_POINTER_DOWN)
                         || actionMasked == MotionEvent.ACTION_HOVER_MOVE) {
                     final int actionIndex = ev.getActionIndex(); // always 0 for down
@@ -2653,12 +2653,12 @@ public abstract class ViewGroup extends View implements ViewParent, ViewManager 
                     removePointersFromTouchTargets(idBitsToAssign);
 
                     final int childrenCount = mChildrenCount;
-                    if (newTouchTarget == null && childrenCount != 0) {
+                    if (newTouchTarget == null && childrenCount != 0) {//todo childrenCount 有没有子view
                         final float x = ev.getX(actionIndex);
                         final float y = ev.getY(actionIndex);
                         // Find a child that can receive the event.
                         // Scan children from front to back.
-                        final ArrayList<View> preorderedList = buildTouchDispatchChildList();
+                        final ArrayList<View> preorderedList = buildTouchDispatchChildList();//todo 子view排序
                         final boolean customOrder = preorderedList == null
                                 && isChildrenDrawingOrderEnabled();
                         final View[] children = mChildren;
@@ -2679,7 +2679,7 @@ public abstract class ViewGroup extends View implements ViewParent, ViewManager 
                                 childWithAccessibilityFocus = null;
                                 i = childrenCount - 1;
                             }
-
+                            //有没点击到这个子view
                             if (!child.canReceivePointerEvents()
                                     || !isTransformedTouchPointInView(x, y, child, null)) {
                                 ev.setTargetAccessibilityFocus(false);
@@ -2737,7 +2737,7 @@ public abstract class ViewGroup extends View implements ViewParent, ViewManager 
 
             // Dispatch to touch targets.
             if (mFirstTouchTarget == null) {
-                // No touch targets so treat this as an ordinary view.
+                // No touch targets so treat this as an ordinary view.  是否处理,交给View
                 handled = dispatchTransformedTouchEvent(ev, canceled, null,
                         TouchTarget.ALL_POINTER_IDS);
             } else {
