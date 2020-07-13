@@ -13393,7 +13393,7 @@ public class View implements Drawable.Callback, KeyEvent.Callback,
      * @return True if the event was handled by the view, false otherwise.
      */
     public boolean dispatchTouchEvent(MotionEvent event) {
-        // If the event should be handled by accessibility focus first.
+        // If the event should be handled by accessibility focus first. 如果这个事件应该首先由无障碍焦点处理
         if (event.isTargetAccessibilityFocus()) {
             // We don't have focus or no virtual descendant has it, do not handle the event.
             if (!isAccessibilityFocusedViewOrHost()) {
@@ -13426,7 +13426,7 @@ public class View implements Drawable.Callback, KeyEvent.Callback,
                     && li.mOnTouchListener.onTouch(this, event)) {
                 result = true;
             }
-
+            //todo: onTouch()的返回值影响这一行是否允许onTouchEvent()方法,onTouchEvent()方法里面会回调onClickListener()方法
             if (!result && onTouchEvent(event)) {
                 result = true;
             }
@@ -13444,7 +13444,7 @@ public class View implements Drawable.Callback, KeyEvent.Callback,
                 (actionMasked == MotionEvent.ACTION_DOWN && !result)) {
             stopNestedScroll();
         }
-
+        //todo: 这个result就代表事件是否消耗
         return result;
     }
 
