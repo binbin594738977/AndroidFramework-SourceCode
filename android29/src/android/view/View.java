@@ -13393,7 +13393,7 @@ public class View implements Drawable.Callback, KeyEvent.Callback,
      * @return True if the event was handled by the view, false otherwise.
      */
     public boolean dispatchTouchEvent(MotionEvent event) {
-        // If the event should be handled by accessibility focus first. 如果这个事件应该首先由无障碍焦点处理
+        // If the event should be handled by accessibility focus first. todo 如果这个事件应该首先由无障碍焦点处理
         if (event.isTargetAccessibilityFocus()) {
             // We don't have focus or no virtual descendant has it, do not handle the event.
             if (!isAccessibilityFocusedViewOrHost()) {
