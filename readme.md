@@ -1,5 +1,5 @@
-# 项目地址
-<https://github.com/binbin594738977/AndroidFramework-soundCode>
+
+由于下载速度考虑,这个不再维护 , 请转移码云https://gitee.com/binbinfuheng/AndroidFramework-SourceCode
 
 # 重要
 1. 默认是不能建立索引的,可以在指定版本中main / java目录选择Mark directory as然后选择Source Root这样可以建立索引了
